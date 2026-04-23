@@ -73,8 +73,9 @@ font-size: 2.5rem;
 /* BUTTON FIXED */
 .left .btn{
 transform: scale(0);
-animation: scaleCricle 1s 2s forwards;
+animation: scaleCricle 1s 2s forwards ease-in-out;
 }
+
 
 @keyframes scaleCricle {
 0%{ transform: scale(0); }
