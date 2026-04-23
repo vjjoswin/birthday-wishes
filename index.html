@@ -9,176 +9,110 @@
 ```
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 ```
 
 </head>
 
 <body>
-    <div id="wrapper">
+<div id="wrapper">
 
 ```
-    <!-- Top Flags -->
-    <div class="flag__birthday">
-        <!-- Removed empty image -->
-        <img src="1.png" alt="birthday" width="350" class="flag__right">
-    </div>
+<!-- FLAGS -->
+<div class="flag__birthday">
+    <img src="1.png" width="350" class="flag__left">
+    <img src="1.png" width="350" class="flag__right">
+</div>
 
-    <div class="content">
+<div class="content">
 
-        <!-- LEFT SIDE -->
-        <div class="left">
-            <div class="title">
-                <h1 class="happy">
-                    <span style="--t:4s;">H</span>
-                    <span style="--t:4.2s;">a</span>
-                    <span style="--t:4.4s;">p</span>
-                    <span style="--t:4.6s;">p</span>
-                    <span style="--t:4.8s;">y</span>
-                </h1>
+    <!-- LEFT -->
+    <div class="left">
+        <div class="title">
+            <h1 class="happy">Happy</h1>
+            <h1 class="birthday">Birthday</h1>
 
-                <h1 class="birthday">
-                    <span style="--t:5s;">B</span>
-                    <span style="--t:5.2s;">i</span>
-                    <span style="--t:5.4s;">r</span>
-                    <span style="--t:5.6s;">t</span>
-                    <span style="--t:5.8s;">h</span>
-                    <span style="--t:6s;">d</span>
-                    <span style="--t:6.2s;">a</span>
-                    <span style="--t:6.4s;">y</span>
-                </h1>
-
-                <div class="hat">
-                    <img src="11.png" alt="hat" width="130">
-                </div>
-            </div>
-
-            <div class="date__of__birth">
-                <span></span>
-            </div>
-
-            <div class="btn">
-                <button id="btn__letter">
-                    Click here for the wonderful letter
-                    <i class="fa-regular fa-envelope"></i>
-                </button>
+            <div class="hat">
+                <img src="11.png" width="130">
             </div>
         </div>
 
-        <!-- RIGHT SIDE -->
-        <div class="right">
-            <div class="box__account">
+        <div class="date__of__birth">
+            <span>May 15</span>
+        </div>
 
-                <div class="image">
-                    <!-- IMPORTANT: rename your image to melita.jpg -->
-                    <img src="melita.jpg" alt="Melita">
-                </div>
-
-                <div class="name">
-                    <i class="fa-solid fa-heart"></i>
-                    <span><center>Sunshine Lady!</center></span>
-                    <i class="fa-solid fa-heart"></i>
-                </div>
-
-                <div class="balloon_one">
-                    <img width="100" src="balloon1.png">
-                </div>
-
-                <div class="balloon_two">
-                    <img width="100" src="balloon2.png">
-                </div>
-
-            </div>
+        <div class="btn">
+            <button id="btn__letter">
+                Click here for the wonderful letter
+            </button>
         </div>
     </div>
 
-    <!-- Decorations -->
-    <div class="decorate_flower--one">
-        <img width="20" src="decorate.png" alt="decor">
+    <!-- RIGHT -->
+    <div class="right">
+        <div class="box__account">
+
+            <div class="image">
+                <!-- FIXED IMAGE -->
+                <img src="melita.jpg" alt="Melita">
+            </div>
+
+            <div class="name">
+                ❤️ <span>Sunshine Lady!</span> ❤️
+            </div>
+
+            <div class="balloon_one">
+                <img src="balloon1.png" width="100">
+            </div>
+
+            <div class="balloon_two">
+                <img src="balloon2.png" width="100">
+            </div>
+
+        </div>
     </div>
+</div>
 
-    <div class="decorate_flower--two">
-        <img width="20" src="decorate.png" alt="decor">
-    </div>
+<!-- LETTER -->
+<div class="box__letter">
+    <div class="letter__border">
 
-    <div class="decorate_flower--three">
-        <img width="20" src="decorate_flower.png" alt="decor">
-    </div>
+        <div class="close">✖</div>
 
-    <div class="decorate_bottom">
-        <img src="1.png" width="100">
-    </div>
+        <div class="letter">
+            <div class="title__letter">To you ❤️</div>
 
-    <div class="smiley__icon">
-        <img src="mewmew.gif" width="300">
-    </div>
-
-    <!-- LETTER BOX -->
-    <div class="box__letter">
-        <div class="letter__border">
-            <div class="letter">
-
-                <div class="title__letter"></div>
-
-                <div class="content__letter">
-
-                    <div class="left">
-                        <img id="heart__letter" src="https://media.giphy.com/media/YKUvclrGYmDKXwtphf/giphy.gif">
+            <div class="content__letter">
+                <div class="right">
+                    <div class="text__letter">
+                        <p id="letterText"></p>
                     </div>
-
-                    <div class="right">
-                        <div class="love__img">
-                            <img src="hea.png" width="220">
-                        </div>
-
-                        <div class="text__letter">
-                            <p></p>
-                        </div>
-
-                        <img id="mewmew" width="80" src="mewmew.gif">
-                    </div>
-
                 </div>
             </div>
 
-            <div class="close">
-                <i class="fa-solid fa-xmark"></i>
-            </div>
         </div>
     </div>
+</div>
+```
 
 </div>
 
-<!-- SCRIPT -->
 <script>
-
-    let datetxt = "May 15";
-
-    let datatxtletter = `Happy Birthday, Melita 😊
-```
-
+const message = `Happy Birthday, Melita 😊
 You have a really calm and kind presence that makes people feel at ease.
 I hope this year brings you everything you’ve been quietly wishing for ✨
 Wishing you all the happiness and a beautiful future ahead!`;
 
-```
-    let titleLetter = "To you";
+document.getElementById("btn__letter").onclick = function () {
+    document.querySelector(".box__letter").style.display = "block";
+    document.querySelector(".letter__border").style.display = "block";
+    document.getElementById("letterText").innerText = message;
+};
 
-    let date__of__birth = document.querySelector(".date__of__birth span");
-    let text__letter = document.querySelector(".text__letter p");
-
-    document.getElementById("btn__letter").onclick = function () {
-        document.querySelector(".box__letter").style.display = "block";
-        text__letter.innerText = datatxtletter;
-        document.querySelector(".title__letter").innerText = titleLetter;
-    };
-
-    document.querySelector(".close").onclick = function () {
-        document.querySelector(".box__letter").style.display = "none";
-    };
-
+document.querySelector(".close").onclick = function () {
+    document.querySelector(".box__letter").style.display = "none";
+    document.querySelector(".letter__border").style.display = "none";
+};
 </script>
-```
 
 </body>
 </html>
