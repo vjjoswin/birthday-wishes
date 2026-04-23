@@ -13,35 +13,41 @@
 ```
 
 </head>
+
 <body>
 <div id="wrapper">
 
 ```
+<!-- FLAGS -->
 <div class="flag__birthday">
-    <img src="" width="350" class="flag__left">
+    <img src="1.png" width="350" class="flag__left">
     <img src="1.png" width="350" class="flag__right">
 </div>
 
 <div class="content">
+
+    <!-- LEFT -->
     <div class="left">
         <div class="title">
             <h1 class="happy">
-                <span style="--t: 4s;">H</span>
-                <span style="--t: 4.2s;">a</span>
-                <span style="--t: 4.4s;">p</span>
-                <span style="--t: 4.6s;">p</span>
-                <span style="--t: 4.8s;">y</span>
+                <span style="--t:4s;">H</span>
+                <span style="--t:4.2s;">a</span>
+                <span style="--t:4.4s;">p</span>
+                <span style="--t:4.6s;">p</span>
+                <span style="--t:4.8s;">y</span>
             </h1>
+
             <h1 class="birthday">
-                <span style="--t: 5s;">B</span>
-                <span style="--t: 5.2s;">i</span>
-                <span style="--t: 5.4s;">r</span>
-                <span style="--t: 5.6s;">t</span>
-                <span style="--t: 5.8s;">h</span>
-                <span style="--t: 6s;">d</span>
-                <span style="--t: 6.2s;">a</span>
-                <span style="--t: 6.4s;">y</span>
+                <span style="--t:5s;">B</span>
+                <span style="--t:5.2s;">i</span>
+                <span style="--t:5.4s;">r</span>
+                <span style="--t:5.6s;">t</span>
+                <span style="--t:5.8s;">h</span>
+                <span style="--t:6s;">d</span>
+                <span style="--t:6.2s;">a</span>
+                <span style="--t:6.4s;">y</span>
             </h1>
+
             <div class="hat">
                 <img src="11.png" width="130">
             </div>
@@ -59,6 +65,7 @@
         </div>
     </div>
 
+    <!-- RIGHT -->
     <div class="right">
         <div class="box__account">
 
@@ -68,7 +75,7 @@
 
             <div class="name">
                 <i class="fa-solid fa-heart"></i>
-                <span><center>Crochet Queen!</center></span>
+                <span><center>🧶 Crochet Queen 👑</center></span>
                 <i class="fa-solid fa-heart"></i>
             </div>
 
@@ -82,6 +89,7 @@
 
         </div>
 
+        <!-- ROTATING TEXT CIRCLE -->
         <div class="cricle">
             <div class="text__cricle">
                 <span style="--i:1;">h</span>
@@ -101,9 +109,11 @@
             </div>
             <i class="fa-solid fa-heart"></i>
         </div>
+
     </div>
 </div>
 
+<!-- DECOR -->
 <div class="decorate_flower--one">
     <img width="20" src="decorate.png" alt="birthday-wishes">
 </div>
@@ -113,7 +123,7 @@
 </div>
 
 <div class="decorate_flower--three">
-    <img width="20" src="decorate_flower.png">
+    <img width="20" src="decorate_flower.png" alt="birthday-wishes">
 </div>
 
 <div class="decorate_bottom">
@@ -124,6 +134,7 @@
     <img src="mewmew.gif" width="300">
 </div>
 
+<!-- LETTER -->
 <div class="box__letter">
     <div class="letter__border">
 
@@ -166,9 +177,9 @@
 <script>
 let datetxt = "April 24";
 
-let datatxtletter = "Happy Birthday, Melita 😊\
-You have a really calm and kind presence that makes people feel at ease.\
-I hope this year brings you everything you’ve been quietly wishing for ✨\
+let datatxtletter = "Happy Birthday, Melita 😊\n\
+You have a really calm and kind presence that makes people feel at ease.\n\
+I hope this year brings you everything you’ve been quietly wishing for ✨\n\
 Wishing you all the happiness and a beautiful future ahead!";
 
 let titleLetter = "To you";
@@ -189,36 +200,13 @@ setTimeout(function(){
         if(currentIndex < charArrDate.length){
             date__of__birth.textContent += charArrDate[currentIndex];
             currentIndex++;
-        } else {
-            clearInterval(timeDatetxt)
-        }
+        } else clearInterval(timeDatetxt)
     },100)
 },12000)
 
 $("#btn__letter").on("click", function(){
     $(".box__letter").slideDown()
     setTimeout(()=> $(".letter__border").slideDown(),1000)
-
-    let intervalTitle = setInterval(function(){
-        if(currentIndexTitle < charArrTitle.length){
-            document.querySelector(".title__letter").textContent += charArrTitle[currentIndexTitle];
-            currentIndexTitle++;
-        } else clearInterval(intervalTitle)
-    },100)
-
-    setTimeout(function(){
-        let intervalContent = setInterval(function(){
-            if(currentIndexLetter < charArrDateLetter.length){
-                text__letter.textContent += charArrDateLetter[currentIndexLetter];
-                currentIndexLetter++;
-            } else clearInterval(intervalContent)
-        },50)
-    },2000)
-})
-
-$(".close").on("click", function(){
-    $(".box__letter").slideUp();
-    $(".letter__border").slideUp();
 })
 </script>
 
