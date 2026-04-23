@@ -1,55 +1,161 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Coiny&family=Titan+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nerko+One&family=Sriracha&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+
+*{
+padding: 0;
 margin: 0;
-font-family: Arial, sans-serif;
-background: #fdecec;
+box-sizing: border-box;
 }
 
-#wrapper {
+:root{
+--color-pink: #feecea;
+--color-white: #fff;
+--color-black: #333;
+--color-text-pink: #ff7882;
+--color-heart: #F61F1F;
+--color-bg-letter: #fff8e4;
+--color-border: #DACCBF;
+}
+
+body {
+height: 100%;
+background: var(--color-pink);
+overflow-x: hidden;
+}
+
+#wrapper{
+height:100%;
+overflow: hidden;
+}
+
+/* FLAGS */
+.flag__birthday{
+display: flex;
+justify-content: space-between;
+transform: translateY(-200px);
+animation: translateYFlag 1.5s 1s forwards;
+}
+
+@keyframes translateYFlag{
+to{
+transform: translateY(-10px);
+}
+}
+
+.flag__birthday .flag__left{
+transform: rotate(-10deg);
+}
+.flag__birthday .flag__right{
+transform: rotate(10deg) scaleX(-1);
+}
+
+/* CONTENT */
+.content{
 display: flex;
 justify-content: center;
 align-items: center;
-height: 100vh;
+padding-top: 2rem;
 }
 
-.content {
+.left, .right{
 display: flex;
-gap: 50px;
+flex-direction: column;
 align-items: center;
 }
 
-.left {
-text-align: center;
+/* TITLE */
+.title{
+font-family: "Titan One", sans-serif;
+font-size: 2.5rem;
 }
 
-.right {
-text-align: center;
+/* BUTTON FIXED */
+.left .btn{
+transform: scale(0);
+animation: scaleCricle 1s 2s forwards;
 }
 
-.image {
-width: 250px;
-height: 250px;
+@keyframes scaleCricle {
+0%{ transform: scale(0); }
+100%{ transform: scale(1); }
+}
+
+#btn__letter{
+margin-top: 20px;
+padding: 8px 20px;
+border-radius: 30px;
+border: 2px solid var(--color-black);
+background: var(--color-text-pink);
+cursor: pointer;
+}
+
+#btn__letter:hover{
+background: var(--color-heart);
+color: #fff;
+}
+
+/* IMAGE */
+.image{
+width: 300px;
+height: 300px;
 border-radius: 50%;
 overflow: hidden;
 border: 5px solid black;
 }
 
-.image img {
+.image img{
 width: 100%;
 height: 100%;
 object-fit: cover;
 }
 
-#btn__letter {
-margin-top: 20px;
-padding: 10px 20px;
-border-radius: 30px;
-border: 2px solid black;
-background: #ff7b8a;
-cursor: pointer;
-font-size: 16px;
+/* BALLOONS */
+.balloon_one{
+position: absolute;
+top: -50px;
+left: -50px;
 }
 
-.box__letter {
+.balloon_two{
+position: absolute;
+top: 100px;
+right: -50px;
+}
+
+/* DECOR */
+.decorate_bottom{
+position: absolute;
+bottom: 0;
+right: 0;
+}
+
+.decorate_flower--one{
+position: absolute;
+top: 200px;
+left: 50px;
+}
+
+.decorate_flower--two{
+position: absolute;
+top: 200px;
+right: 50px;
+}
+
+.decorate_flower--three{
+position: absolute;
+top: 100px;
+right: 200px;
+}
+
+.smiley__icon{
+position: absolute;
+bottom: 100px;
+left: 50%;
+}
+
+/* LETTER */
+.box__letter{
 position: fixed;
 top: 0;
 left: 0;
@@ -59,9 +165,9 @@ background: rgba(0,0,0,0.5);
 display: none;
 }
 
-.letter__border {
+.letter__border{
+width: 400px;
 background: white;
-width: 300px;
 padding: 20px;
 border-radius: 10px;
 position: absolute;
@@ -71,10 +177,9 @@ transform: translate(-50%, -50%);
 display: none;
 }
 
-.close {
+.close{
 position: absolute;
 top: 5px;
 right: 10px;
 cursor: pointer;
-font-size: 18px;
 }
