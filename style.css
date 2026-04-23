@@ -53,7 +53,7 @@ transform: rotate(10deg) scaleX(-1);
 /* CONTENT */
 .content{
 display: flex;
-justify-content: center;
+justify-content: space-around;
 align-items: center;
 padding-top: 2rem;
 }
@@ -64,18 +64,26 @@ flex-direction: column;
 align-items: center;
 }
 
+.left{
+width: 40%;
+}
+
+.right{
+width: 40%;
+position: relative;
+}
+
 /* TITLE */
 .title{
 font-family: "Titan One", sans-serif;
 font-size: 2.5rem;
 }
 
-/* BUTTON FIXED */
+/* BUTTON FIX */
 .left .btn{
 transform: scale(0);
 animation: scaleCricle 1s 2s forwards ease-in-out;
 }
-
 
 @keyframes scaleCricle {
 0%{ transform: scale(0); }
@@ -97,6 +105,10 @@ color: #fff;
 }
 
 /* IMAGE */
+.box__account{
+position: relative;  /* 🔥 IMPORTANT FIX */
+}
+
 .image{
 width: 300px;
 height: 300px;
@@ -111,17 +123,17 @@ height: 100%;
 object-fit: cover;
 }
 
-/* BALLOONS */
+/* BALLOONS FIXED */
 .balloon_one{
 position: absolute;
-top: -50px;
-left: -50px;
+top: -60px;
+left: -60px;
 }
 
 .balloon_two{
 position: absolute;
-top: 100px;
-right: -50px;
+top: 120px;
+right: -60px;
 }
 
 /* DECOR */
