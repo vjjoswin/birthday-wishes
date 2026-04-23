@@ -2,85 +2,144 @@
 
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Happy Birthday 🎉</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday 🎉</title>
 
-  <link rel="stylesheet" href="style.css">
+```
+<link rel="stylesheet" href="style.css">
+```
+
 </head>
 
 <body>
-
 <div id="wrapper">
 
-  <div class="content">
-
 ```
-<!-- LEFT -->
-<div class="left">
-  <h1>Happy Birthday 🎉</h1>
-
-  <button id="btn__letter">
-    Click here for the wonderful letter 💌
-  </button>
+<!-- FLAGS -->
+<div class="flag__birthday">
+    <img src="1.png" class="flag__left">
+    <img src="1.png" class="flag__right">
 </div>
 
-<!-- RIGHT -->
-<div class="right">
-  <div class="image">
-    <img src="Melita.jpg" alt="Melita">
-  </div>
+<div class="content">
 
-  <h2>❤️ Crochet Queen! ❤️</h2>
+    <!-- LEFT -->
+    <div class="left">
+
+        <div class="title">
+            <h1 class="happy">Happy</h1>
+            <h1 class="birthday">Birthday</h1>
+        </div>
+
+        <div class="date__of__birth">
+            <span>May 15</span>
+        </div>
+
+        <div class="btn">
+            <button id="btn__letter">
+                Click here for the wonderful letter 💌
+            </button>
+        </div>
+
+    </div>
+
+    <!-- RIGHT -->
+    <div class="right">
+
+        <div class="box__account">
+
+            <div class="image">
+                <img src="Melita.jpg" alt="Melita">
+            </div>
+
+            <div class="name">
+                <span>🧶 Crochet Queen 👑</span>
+            </div>
+
+            <!-- BALLOONS -->
+            <div class="balloon_one">
+                <img src="balloon1.png">
+            </div>
+
+            <div class="balloon_two">
+                <img src="balloon2.png">
+            </div>
+
+        </div>
+
+    </div>
 </div>
-```
 
-  </div>
+<!-- DECOR -->
+<div class="decorate_bottom">
+    <img src="1.png" width="100">
+</div>
 
-  <!-- LETTER -->
+<div class="decorate_flower--one">
+    <img src="decorate.png">
+</div>
 
-  <div class="box__letter">
+<div class="decorate_flower--two">
+    <img src="decorate.png">
+</div>
+
+<div class="decorate_flower--three">
+    <img src="decorate_flower.png">
+</div>
+
+<div class="smiley__icon">
+    <img src="mewmew.gif">
+</div>
+
+<!-- LETTER -->
+<div class="box__letter">
     <div class="letter__border">
 
-```
-  <div class="close">✖</div>
+        <div class="close">✖</div>
 
-  <div class="letter">
-    <h2>To you ❤️</h2>
-    <p id="letterText"></p>
-  </div>
+        <div class="letter">
+            <div class="title__letter">To you ❤️</div>
 
+            <div class="content__letter">
+                <div class="right">
+                    <div class="text__letter">
+                        <p id="letterText"></p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
 </div>
 ```
-
-  </div>
 
 </div>
 
 <script>
 document.addEventListener("DOMContentLoaded", function () {
 
-  const btn = document.getElementById("btn__letter");
-  const box = document.querySelector(".box__letter");
-  const border = document.querySelector(".letter__border");
-  const close = document.querySelector(".close");
-  const text = document.getElementById("letterText");
+    const btn = document.getElementById("btn__letter");
+    const box = document.querySelector(".box__letter");
+    const border = document.querySelector(".letter__border");
+    const close = document.querySelector(".close");
+    const text = document.getElementById("letterText");
 
-  const message = `Happy Birthday, Melita 😊
+    const message = `Happy Birthday, Melita 😊
 You have a really calm and kind presence that makes people feel at ease.
 I hope this year brings you everything you’ve been quietly wishing for ✨
 Wishing you all the happiness and a beautiful future ahead!`;
 
-  btn.addEventListener("click", function () {
-    box.style.display = "block";
-    border.style.display = "block";
-    text.innerText = message;
-  });
+    btn.addEventListener("click", function () {
+        box.style.display = "block";
+        border.style.display = "block";
+        text.innerText = message;
+    });
 
-  close.addEventListener("click", function () {
-    box.style.display = "none";
-    border.style.display = "none";
-  });
+    close.addEventListener("click", function () {
+        box.style.display = "none";
+        border.style.display = "none";
+    });
 
 });
 </script>
