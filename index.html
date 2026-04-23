@@ -2,117 +2,131 @@
 
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happy Birthday 🎉</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Birthday 🎉</title>
 
-```
-<link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-```
+  <!-- Styles -->
 
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 </head>
 
 <body>
-<div id="wrapper">
+  <div id="wrapper">
 
 ```
 <!-- FLAGS -->
 <div class="flag__birthday">
-    <img src="1.png" width="350" class="flag__left">
-    <img src="1.png" width="350" class="flag__right">
+  <!-- If you don't have a left flag image, you can remove it -->
+  <img src="1.png" alt="flag" width="350" class="flag__left" />
+  <img src="1.png" alt="flag" width="350" class="flag__right" />
 </div>
 
 <div class="content">
 
-    <!-- LEFT -->
-    <div class="left">
-        <div class="title">
-            <h1 class="happy">Happy</h1>
-            <h1 class="birthday">Birthday</h1>
+  <!-- LEFT -->
+  <div class="left">
+    <div class="title">
+      <h1 class="happy">Happy</h1>
+      <h1 class="birthday">Birthday</h1>
 
-            <div class="hat">
-                <img src="11.png" width="130">
-            </div>
-        </div>
-
-        <div class="date__of__birth">
-            <span>May 15</span>
-        </div>
-
-        <div class="btn">
-            <button id="btn__letter">
-                Click here for the wonderful letter
-            </button>
-        </div>
+      <div class="hat">
+        <img src="11.png" alt="hat" width="130" />
+      </div>
     </div>
 
-    <!-- RIGHT -->
-    <div class="right">
-        <div class="box__account">
-
-            <div class="image">
-                <!-- FIXED IMAGE -->
-                <img src="melita.jpg" alt="Melita">
-            </div>
-
-            <div class="name">
-                ❤️ <span>Sunshine Lady!</span> ❤️
-            </div>
-
-            <div class="balloon_one">
-                <img src="balloon1.png" width="100">
-            </div>
-
-            <div class="balloon_two">
-                <img src="balloon2.png" width="100">
-            </div>
-
-        </div>
+    <div class="date__of__birth">
+      <span>May 15</span>
     </div>
+
+    <div class="btn">
+      <button id="btn__letter">
+        Click here for the wonderful letter
+        <i class="fa-regular fa-envelope"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- RIGHT -->
+  <div class="right">
+    <div class="box__account">
+
+      <div class="image">
+        <!-- Use a safe filename (no spaces) -->
+        <img src="Melita.jpg" alt="Melita" />
+      </div>
+
+      <div class="name">
+        <i class="fa-solid fa-heart"></i>
+        <span>Sunshine Lady!</span>
+        <i class="fa-solid fa-heart"></i>
+      </div>
+
+      <div class="balloon_one">
+        <img src="balloon1.png" alt="balloon" width="100" />
+      </div>
+
+      <div class="balloon_two">
+        <img src="balloon2.png" alt="balloon" width="100" />
+      </div>
+
+    </div>
+  </div>
+
 </div>
 
-<!-- LETTER -->
+<!-- LETTER OVERLAY -->
 <div class="box__letter">
-    <div class="letter__border">
+  <div class="letter__border">
 
-        <div class="close">✖</div>
-
-        <div class="letter">
-            <div class="title__letter">To you ❤️</div>
-
-            <div class="content__letter">
-                <div class="right">
-                    <div class="text__letter">
-                        <p id="letterText"></p>
-                    </div>
-                </div>
-            </div>
-
-        </div>
+    <div class="close">
+      <i class="fa-solid fa-xmark"></i>
     </div>
+
+    <div class="letter">
+      <div class="title__letter">To you ❤️</div>
+
+      <div class="content__letter">
+        <div class="right">
+          <div class="text__letter">
+            <p id="letterText"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
 </div>
 ```
 
-</div>
+  </div>
 
-<script>
-const message = `Happy Birthday, Melita 😊
+  <!-- SCRIPT -->
+
+  <script>
+    const message = `Happy Birthday, Melita 😊
 You have a really calm and kind presence that makes people feel at ease.
 I hope this year brings you everything you’ve been quietly wishing for ✨
 Wishing you all the happiness and a beautiful future ahead!`;
 
-document.getElementById("btn__letter").onclick = function () {
-    document.querySelector(".box__letter").style.display = "block";
-    document.querySelector(".letter__border").style.display = "block";
-    document.getElementById("letterText").innerText = message;
-};
+    const openBtn = document.getElementById("btn__letter");
+    const closeBtn = document.querySelector(".close");
+    const box = document.querySelector(".box__letter");
+    const border = document.querySelector(".letter__border");
+    const text = document.getElementById("letterText");
 
-document.querySelector(".close").onclick = function () {
-    document.querySelector(".box__letter").style.display = "none";
-    document.querySelector(".letter__border").style.display = "none";
-};
-</script>
+    openBtn.addEventListener("click", () => {
+      box.style.display = "block";
+      border.style.display = "block";
+      text.innerText = message;
+    });
+
+    closeBtn.addEventListener("click", () => {
+      box.style.display = "none";
+      border.style.display = "none";
+    });
+  </script>
 
 </body>
 </html>
