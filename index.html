@@ -8,108 +8,155 @@
 
 ```
 <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 ```
 
 </head>
-
 <body>
 <div id="wrapper">
 
 ```
-<!-- FLAGS -->
 <div class="flag__birthday">
-    <img src="1.png" class="flag__left">
-    <img src="1.png" class="flag__right">
+    <img src="" width="350" class="flag__left">
+    <img src="1.png" width="350" class="flag__right">
 </div>
 
 <div class="content">
-
-    <!-- LEFT -->
     <div class="left">
-
         <div class="title">
-            <h1 class="happy">Happy</h1>
-            <h1 class="birthday">Birthday</h1>
+            <h1 class="happy">
+                <span style="--t: 4s;">H</span>
+                <span style="--t: 4.2s;">a</span>
+                <span style="--t: 4.4s;">p</span>
+                <span style="--t: 4.6s;">p</span>
+                <span style="--t: 4.8s;">y</span>
+            </h1>
+            <h1 class="birthday">
+                <span style="--t: 5s;">B</span>
+                <span style="--t: 5.2s;">i</span>
+                <span style="--t: 5.4s;">r</span>
+                <span style="--t: 5.6s;">t</span>
+                <span style="--t: 5.8s;">h</span>
+                <span style="--t: 6s;">d</span>
+                <span style="--t: 6.2s;">a</span>
+                <span style="--t: 6.4s;">y</span>
+            </h1>
+            <div class="hat">
+                <img src="11.png" width="130">
+            </div>
         </div>
 
         <div class="date__of__birth">
-            <span>May 15</span>
+            <span></span>
         </div>
 
         <div class="btn">
             <button id="btn__letter">
-                Click here for the wonderful letter 💌
+                Click here for the wonderful letter
+                <i class="fa-regular fa-envelope"></i>
             </button>
         </div>
-
     </div>
 
-    <!-- RIGHT -->
     <div class="right">
-
         <div class="box__account">
 
             <div class="image">
-                <img src="Melita.jpg" alt="Melita">
+                <img src="Melita.jpg" alt="birthday-wishes">
             </div>
 
             <div class="name">
-                <span>🧶 Crochet Queen 👑</span>
+                <i class="fa-solid fa-heart"></i>
+                <span><center>Crochet Queen!</center></span>
+                <i class="fa-solid fa-heart"></i>
             </div>
 
-            <!-- BALLOONS -->
             <div class="balloon_one">
-                <img src="balloon1.png">
+                <img width="100" src="balloon1.png">
             </div>
 
             <div class="balloon_two">
-                <img src="balloon2.png">
+                <img width="100" src="balloon2.png">
             </div>
 
         </div>
 
+        <div class="cricle">
+            <div class="text__cricle">
+                <span style="--i:1;">h</span>
+                <span style="--i:2;">a</span>
+                <span style="--i:3;">p</span>
+                <span style="--i:4;">p</span>
+                <span style="--i:5;">y</span>
+                <span style="--i:6;">-</span>
+                <span style="--i:7;">b</span>
+                <span style="--i:8;">i</span>
+                <span style="--i:9;">r</span>
+                <span style="--i:10;">t</span>
+                <span style="--i:11;">h</span>
+                <span style="--i:12;">d</span>
+                <span style="--i:13;">a</span>
+                <span style="--i:14;">y</span>
+            </div>
+            <i class="fa-solid fa-heart"></i>
+        </div>
     </div>
 </div>
 
-<!-- DECOR -->
+<div class="decorate_flower--one">
+    <img width="20" src="decorate.png" alt="birthday-wishes">
+</div>
+
+<div class="decorate_flower--two">
+    <img width="20" src="decorate.png" alt="birthday-wishes">
+</div>
+
+<div class="decorate_flower--three">
+    <img width="20" src="decorate_flower.png">
+</div>
+
 <div class="decorate_bottom">
     <img src="1.png" width="100">
 </div>
 
-<div class="decorate_flower--one">
-    <img src="decorate.png">
-</div>
-
-<div class="decorate_flower--two">
-    <img src="decorate.png">
-</div>
-
-<div class="decorate_flower--three">
-    <img src="decorate_flower.png">
-</div>
-
 <div class="smiley__icon">
-    <img src="mewmew.gif">
+    <img src="mewmew.gif" width="300">
 </div>
 
-<!-- LETTER -->
 <div class="box__letter">
     <div class="letter__border">
 
-        <div class="close">✖</div>
-
         <div class="letter">
-            <div class="title__letter">To you ❤️</div>
+            <div class="title__letter"></div>
 
             <div class="content__letter">
+                <div class="left">
+                    <img id="heart__letter" src="https://media.giphy.com/media/YKUvclrGYmDKXwtphf/giphy.gif">
+                    <img class="heart heart_1" width="20" src="heart.png">
+                    <img class="heart heart_2" width="20" src="heart.png">
+                    <img class="heart heart_3" width="20" src="heart.png">
+                    <img class="heart heart_4" width="20" src="heart.png">
+                </div>
+
                 <div class="right">
-                    <div class="text__letter">
-                        <p id="letterText"></p>
+                    <div class="love__img">
+                        <img src="hea.png" width="220">
                     </div>
+
+                    <div class="text__letter">
+                        <p></p>
+                    </div>
+
+                    <img id="mewmew" width="80" src="mewmew.gif">
                 </div>
             </div>
-
         </div>
+
+        <div class="close">
+            <i class="fa-solid fa-xmark"></i>
+        </div>
+
     </div>
 </div>
 ```
@@ -117,31 +164,62 @@
 </div>
 
 <script>
-document.addEventListener("DOMContentLoaded", function () {
+let datetxt = "April 24";
 
-    const btn = document.getElementById("btn__letter");
-    const box = document.querySelector(".box__letter");
-    const border = document.querySelector(".letter__border");
-    const close = document.querySelector(".close");
-    const text = document.getElementById("letterText");
+let datatxtletter = "Happy Birthday, Melita 😊\
+You have a really calm and kind presence that makes people feel at ease.\
+I hope this year brings you everything you’ve been quietly wishing for ✨\
+Wishing you all the happiness and a beautiful future ahead!";
 
-    const message = `Happy Birthday, Melita 😊
-You have a really calm and kind presence that makes people feel at ease.
-I hope this year brings you everything you’ve been quietly wishing for ✨
-Wishing you all the happiness and a beautiful future ahead!`;
+let titleLetter = "To you";
 
-    btn.addEventListener("click", function () {
-        box.style.display = "block";
-        border.style.display = "block";
-        text.innerText = message;
-    });
+let charArrDate = datetxt.split('');
+let charArrDateLetter = datatxtletter.split('');
+let charArrTitle = titleLetter.split('');
 
-    close.addEventListener("click", function () {
-        box.style.display = "none";
-        border.style.display = "none";
-    });
+let currentIndex = 0;
+let currentIndexLetter = 0;
+let currentIndexTitle = 0;
 
-});
+let date__of__birth = document.querySelector(".date__of__birth span");
+let text__letter = document.querySelector(".text__letter p");
+
+setTimeout(function(){
+    let timeDatetxt = setInterval(function(){
+        if(currentIndex < charArrDate.length){
+            date__of__birth.textContent += charArrDate[currentIndex];
+            currentIndex++;
+        } else {
+            clearInterval(timeDatetxt)
+        }
+    },100)
+},12000)
+
+$("#btn__letter").on("click", function(){
+    $(".box__letter").slideDown()
+    setTimeout(()=> $(".letter__border").slideDown(),1000)
+
+    let intervalTitle = setInterval(function(){
+        if(currentIndexTitle < charArrTitle.length){
+            document.querySelector(".title__letter").textContent += charArrTitle[currentIndexTitle];
+            currentIndexTitle++;
+        } else clearInterval(intervalTitle)
+    },100)
+
+    setTimeout(function(){
+        let intervalContent = setInterval(function(){
+            if(currentIndexLetter < charArrDateLetter.length){
+                text__letter.textContent += charArrDateLetter[currentIndexLetter];
+                currentIndexLetter++;
+            } else clearInterval(intervalContent)
+        },50)
+    },2000)
+})
+
+$(".close").on("click", function(){
+    $(".box__letter").slideUp();
+    $(".letter__border").slideUp();
+})
 </script>
 
 </body>
